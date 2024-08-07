@@ -24,14 +24,11 @@ jobs:
     runs-on: self-hosted
     needs: checkout
     steps:
-      - name: Install latest .NET SDK
-        uses: Elskom/setup-latest-dotnet@main
+      - name: Install .NET Core SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0'
     
-      # - name: Restore, Build, test, and pack
-      #   uses: Elskom/build-dotnet@main
-      #   with:
-      #     RESTORE: true
-      #     PACK: true
       - name:  Restore, Build, and Publish
         run: |
           dotnet restore
