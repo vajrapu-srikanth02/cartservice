@@ -1,4 +1,4 @@
-name: node lang
+name: dotnet lang
 
 env:
   APP_NAME: cartservice
