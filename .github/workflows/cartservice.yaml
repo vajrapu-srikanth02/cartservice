@@ -1,4 +1,4 @@
-name: dotnet lang
+name: .NET Core CI
 
 env:
   APP_NAME: cartservice
@@ -28,6 +28,11 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0'
+        env:
+          DOTNET_INSTALL_DIR: $HOME/dotnet
+        
+      - name: Add .NET to PATH
+        run: echo "$HOME/dotnet" >> $GITHUB_PATH 
     
       - name:  Restore, Build, and Publish
         run: |
