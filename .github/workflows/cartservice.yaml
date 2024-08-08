@@ -79,7 +79,7 @@ jobs:
       
       - name: Build and push
         run: |
-          docker build -t srikanthhg/$APP_NAME:${{ github.sha }} .
+          docker build -t srikanthhg/$APP_NAME:${{ github.sha }} src
       
   trivy-image-scan:
     runs-on: self-hosted
