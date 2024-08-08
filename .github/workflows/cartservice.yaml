@@ -102,4 +102,3 @@ jobs:
       - name: Push Docker Image
         run: |
             docker push srikanthhg/$APP_NAME:${{ github.sha }}
-
