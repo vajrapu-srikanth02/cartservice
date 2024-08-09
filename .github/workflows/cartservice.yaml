@@ -120,3 +120,4 @@ jobs:
           sed -i "s,imageVersion:.*,imageVersion:\ ${{ github.sha }}," $APP_NAME/values.yaml
           git add . && git commit -m "update image version"
           git push
+          
